@@ -1,0 +1,180 @@
+-------------Tipos em typescript--------------
+string - 'text'
+number - 2011
+boolean - true or false
+array - 'javascript', 'typescript', 'C#', 'PHP'
+tuple - 'Hcode',2015,true
+object - nome: 'joão', idade: 25
+enum - A = 1, B = 2, C = 3
+null - null
+undefined - undefined
+any - qualquer tipo
+unknown - unknown
+void - função sem retorno definido
+never - retorno de funções de erro
+
+================================================
+
+STRING
+let empresa: string
+let empresa = 'teste'
+
+================================================
+
+NUMBER
+let ano: number
+let ano = 2022
+obs converter para número:
+ano2 = Number('2010')
+ano2 = +'2010'
+ano2 = parseInt('2010')
+ano2 = parseFloat('2010.65')
+
+================================================
+
+UNION TYPES
+let chavePix: string | number;
+
+chavePix = "fabiano_damasio@hotmail.com"
+chavePix = 4898822221685
+
+================================================
+
+BOOLEN
+let admin: boolen;
+admin = false;
+admin = true
+
+admin = Boolean('1') - converter um valor 1 ou 0 para true e false - tudo que for diferente de 0, null, undefined será true
+
+================================================
+
+ARRAY
+const filmeCategorias: string[] = [] - array só com string
+
+filmeCategorias.push('romance')
+
+const filmesAnos: Array<number | string> = []
+
+for (let ano = 2000; ano <= new Date().getFullYear(); ano++) {
+    filmesAnos.push(ano)
+}
+
+const filmeCategorias: string[] | number[] = [] - ele recebe um array de string ou um array de number
+const filmeCategorias: (string | number)[] = [] - ele recebe no mesmo array tanto número como string
+
+================================================
+
+TUPLE
+nada mais é um array em orderm e com limitação de tamanho
+
+let superset: [string, number, string]
+
+superset = ["typescript", 2011, "Andres"]
+
+================================================
+
+OBJECT
+let configuracaoServidor: object = {
+    servidor: 'microsoft',
+    ip: '127.0.0.1',
+    senha: '653216'
+}
+
+configuracaoServidor = {
+    servidor: 'teste',
+    ip: '127.0.0.1',
+    senha: '653216'
+}
+
+================================================
+
+ENUM
+enum Permission = {
+    admin = 1,
+    user,
+    readyonly
+}
+
+console.log(Permission.admin)
+console.log(Permission.user)
+console.log(Permission.readyonly)
+
+console.log(Permission[1]) - admin
+
+
+
+================================================
+
+NULL, UNDEFINED
+const meuElemento: HTMLHeadingElement | null = document.querySelector("h2")
+
+let db: string | null = 'mysql, 127..0.0.1'
+
+null - não existe
+undefined - não foi definida ainda
+
+let minhaVariavel: string | undefined
+if (new Date().getDate() === 15) {
+    minhaVariavel = "Hoje é dia 15"
+}
+
+================================================
+
+ANY
+let valor: any; - se não colocar o any ela vai aceitar o primeiro tipo que ela assumir e assumir esse tipo
+
+
+let itens: any[] = []
+
+================================================
+
+UNKNOWN
+let resultado: unknown; - não podemos definir a sua variável em outra variável
+
+ex.:
+const informacao: any = 150;
+const informacaoDesconhecida: unknown = 250;
+
+const primeiroNumero: number = informacao;
+const segundoNumero: number = informacaoDesconhecida - da erro pra number não aceita unknown
+
+================================================
+
+VOID
+const meuConsole: void =  console.log('hello world');
+
+console.log(meuConsole); - undefined
+
+function mostrarFrase(): void {
+    console.log('aprendendo')
+}
+
+================================================
+
+NEVER
+function showError(message: string): never { - nunca vai retornar nada
+    throw new Error(message)
+}
+
+showError('algo errado')
+
+
+let n = 0
+function loopInfinito(): never { - sempre vai ficar verificando mas nunca vai ter um retorno
+
+    while(true) {
+        console.log(n++)
+    }
+}
+loopInfinito();
+
+================================================
+
+TYPE ASSERTIONS
+const site: unknown = "www.site.com.br"
+
+let sitesFavoritos: string[] = []
+
+sitesFavoritos.push(site as string) - sites é como se fosse string (as)
+sitesFavoritos.push(<string>site) - sites é como se fosse string (mesmo do anterior)

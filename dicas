@@ -1,0 +1,5 @@
+conpilar typescript
+'tsc'
+'tsc --watch
+
+typeof valor - ver o tipo da variável
