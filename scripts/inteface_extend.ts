@@ -5,7 +5,7 @@ interface IPessoa {
 }
 
 interface IUsiario extends IPessoa {
-    //nome: string; ele estende o padrão de dados de IPessoas - não é o mesmo valor
+    //nome: string; ele estende o padrão de dados de IPessoa - não é o mesmo valor
     email: string;
     senha: string;
     //id: number
