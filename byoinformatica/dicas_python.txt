@@ -1,0 +1,116 @@
+# -*- coding: utf-8 -*- # reconhecer aracteres especiais
+
+"""
+multiplas linhas
+"""
+#uma linha
+
+
+######### operadores lógicos #########
+
++ # adição
+- # subtração
+* # multiplicação
+/ # divisão
+** # exponenciação
+% # módulo
+
+
+######### operadores relacionais #########
+
+== # igual
+!= # diferente
+> # maior
+< # menor
+>= # maior ou igual
+<= # menor ou igual
+
+
+######### operadores lógicos #########
+
+and # duas condições sejam verdadeiras
+or # pelo menos uma condisão seja verdadeira
+not # inverte o valor
+
+
+######### estruturas condicionais #########
+
+if # se - if x > 0: faz isso
+
+else # senão - 
+    if x > y:
+        faz isso
+    else:
+        faz aquilo
+
+elif # mais condisões senão ainda
+    if x > y:
+        faz isso
+    elif y > x:
+        faz isso
+    else:
+        faz aquilo
+
+
+######### estruturas de repetição #########
+
+while # enquanto
+    x = 1
+    while x < 5:
+        print(x)
+        x = x+1 - forma reduzida x += 1
+
+for # para
+    lista = [1, 2, 3, 4, 5]
+    lista2 = ['olá', 'teste', true]
+
+    for i in lista: - percorre a lista
+        print(i)
+
+for i in range(10,20,2): - vai fazer uma contagem de 10 itens, até o 20, no passo de 2 em 2
+    print(i)
+
+
+######### comando input #########
+
+valor1 = input("Digite um valor: ") - recebe um texto
+valor1 = int(input("Digite um valor: ")) - recebe um inteiro
+valor1 = float(input("Digite um valor: ")) - recebe um float
+
+
+
+######### listas (array) #########
+
+nucleotideos = ["A","T","C","G"]
+ 
+print nucleotideos
+ 
+- Será impresso: ['A','T','C','G']
+print(nucleotideos[2])
+for item in nucleotideos: - printar cada elemento separadamente da lista
+    print(item)
+tamanho = len(nucleotideos) - tamanho da lista
+nucleotideos.append("F") - adicionar elemento na lista
+
+if 7 in nucleotideos:
+    print("7 está na lista")
+
+del nucleotideos[2:] - retirar apenas a posição 2, [:] tira tudo da lista
+
+
+
+######### dicionários - não tem indice #########
+
+meu_dicionario = {"A": "AMEIXA", "B": "BOLA", "C":"CACHORO"}
+
+print(meu_dicionario["B])
+for chave in meu_dicionario:
+    print(chave)
+    print(meu_dicionario[chave])
+
+for i in meu_dicionario.items(): - percorre e retorna as chaves e os valores
+    print(i)
+for i in meu_dicionario.values(): - percorre e retorna os valores
+    print(i)
+for i in meu_dicionario.keys(): - percorre e retorna as chaves
+    print(i)
