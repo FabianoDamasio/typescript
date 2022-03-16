@@ -1,0 +1,102 @@
+######### listas (array) #########
+
+nucleotideos = ["A","T","C","G"]
+ 
+print nucleotideos
+ 
+- Será impresso: ['A','T','C','G']
+print(nucleotideos[2])
+for item in nucleotideos: - printar cada elemento separadamente da lista
+    print(item)
+tamanho = len(nucleotideos) - tamanho da lista
+nucleotideos.append("F") - adicionar elemento na lista
+
+if 7 in nucleotideos:
+    print("7 está na lista")
+
+del nucleotideos[2:] - retirar apenas a posição 2, [:] tira tudo da lista
+
+
+
+######### dicionários - não tem indice #########
+
+meu_dicionario = {"A": "AMEIXA", "B": "BOLA", "C":"CACHORO"}
+
+print(meu_dicionario["B])
+for chave in meu_dicionario:
+    print(chave)
+    print(meu_dicionario[chave])
+
+for i in meu_dicionario.items(): - percorre e retorna as chaves e os valores
+    print(i)
+for i in meu_dicionario.values(): - percorre e retorna os valores
+    print(i)
+for i in meu_dicionario.keys(): - percorre e retorna as chaves
+    print(i)
+
+
+######### strings #########
+---concatenação
+a = "Fabiano"
+b = "Damasio"
+concatenar = a + " " + b
+
+---tamanho da strings
+tamanho = len(concatenar)
+
+---navegação
+print(a[2])
+b
+
+print(a[0:2]) - imprimir dentro de um range
+Fab
+
+######### Funções #########
+def NOME(parâmetros):
+    comandos
+
+NOME(argumentos)
+
+def soma(a, b):
+    return a + b
+
+s = soma(1, 5)
+print(s)
+
+######### Manipular arquivos #########
+variavel = open(nome, modo)
+
+Modos:
+r - somente leitura
+w - escrita (caso o arquivo já exista, ele será apagado e um novo arquivo vazio será criado)
+a - leitura e escrita (adicona o novo conteúdo ao fim do arquivo)
+r+ - leitura e escrita
+w+ - mesma do w
+a+ - leitura e escrita (abre o arquivo para atualizar)
+
+lendo arquivos
+read() - lê o arquivo inteiro
+readline() - lê a linha
+readlines() - lê o arquivo eo armazena em uma lista
+
+ex.:
+arquivo = open("arquivo.txt")
+
+texto_completo = arquivo.read()
+
+w = open("arquivo2.txt", "w")
+w.write("esse é o novo aquivo")
+w.close()
+
+
+######### Expressões regulares #########
+busca e manipulação de texto
+
+match("padrão", "string") - busca idênticas
+import re
+
+print re.match('ATCG', ATCG)
+
+search(padrão, string) - realiza busca
+
+ref.: https://www.vooo.pro/insights/tutorial-sobre-expressoes-regulares-para-iniciantes-em-python/
