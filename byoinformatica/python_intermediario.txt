@@ -100,3 +100,35 @@ print re.match('ATCG', ATCG)
 search(padrão, string) - realiza busca
 
 ref.: https://www.vooo.pro/insights/tutorial-sobre-expressoes-regulares-para-iniciantes-em-python/
+
+
+######### Tratamento de exceções #########
+a = 2
+b = 0
+try:
+    print(a/b)
+except:
+    print("não é possível")
+
+######### Números aleatórios #########
+
+import random
+
+numero = random.randint(0, 10) - tráz um número aleatório entre 0 e 10
+
+lista = [6, 45, 9]
+numero = random.choice(lista) - escolhe um número aleatório da minha lista
+
+######### Modularização #########
+separar o código em arquivos diferentes
+
+
+
+
+Lista de exercícios 2
+
+Escreva um programa que compare se duas sequências digitadas pelo usuário são iguais.
+Escreva um programa que abra um arquivo digitado pelo usuário e imprima seu conteúdo na tela.
+Escreva um programa que receba uma sequência digitada pelo usuário e a salve num arquivo no formato fasta.
+Escreva um programa que exiba um menu e pergunte o que o usuário deseja fazer. Se o usuário digitar 1, o programa deve chamar uma função que lê um arquivo de texto. Se o usuário apertar 2, o programa deve imprimir o conteúdo do arquivo lido anteriormente. Se o usuário apertar três o programa deve ser fechado.
+Escreva um programa que leia um arquivo multi-fasta e armazene em um dicionário: cabeçalho da sequência como a chave e a sequência como valor.
